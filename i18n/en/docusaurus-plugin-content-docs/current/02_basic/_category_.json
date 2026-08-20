@@ -1,0 +1,9 @@
+{
+  "label": "Basic Cases",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/02_basic",
+    "description": "Entry-level vision and speech AI application cases."
+  }
+}
