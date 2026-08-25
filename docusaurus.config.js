@@ -185,6 +185,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
+      algolia: {
+        appId: "1VU781LYTV",
+        apiKey: "fb65c6e54a52ce6fba0645bd2630e79b",
+        indexName: "x5_cases_doc",
+        contextualSearch: true,
+        searchPagePath: "search",
+      },
       zoom: {
         selector: ".markdown img",
         background: {
@@ -278,22 +285,6 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-  themes: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        hashed: true,
-        language: ["en", "zh"],
-        highlightSearchTermsOnTargetPage: true,
-        explicitSearchResultPath: true,
-        docsRouteBasePath: ["/"],
-        indexDocs: true,
-        indexBlog: false,
-        indexPages: false,
-        searchResultContextMaxLength: 50,
-      },
-    ],
-  ],
 };
 
 export default config;
