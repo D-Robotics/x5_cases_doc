@@ -29,39 +29,39 @@ Create a `usb_camera.py` file and paste the following code:
 ```python
 import cv2
 
-# 打开USB摄像头
-# 0表示默认摄像头，如果有多个摄像头可以改为1、2...
+# Open the USB camera
+# 0 is the default camera; change to 1, 2, ... if multiple cameras are connected
 cap = cv2.VideoCapture(0)
 
-# 检查摄像头是否打开成功
+# Check whether the camera opened successfully
 if not cap.isOpened():
-    print("无法打开USB摄像头")
+    print("Failed to open the USB camera")
     exit()
 
-# 设置摄像头分辨率（可选）
+# Set the camera resolution (optional)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
-print("USB摄像头启动成功，按 q 退出")
+print("USB camera started. Press q to exit")
 try:
     while True:
-        # 读取一帧图像
+        # Read one frame
         ret, frame = cap.read()
 
         if not ret:
-            print("读取摄像头数据失败")
+            print("Failed to read camera data")
             break
 
-        # 显示图像
+        # Display the image
         cv2.imshow("USB Camera", frame)
 
-        # 按q退出
+        # Press q to exit
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 except KeyboardInterrupt:
-    print("\n程序被用户中断，正在退出...")
+    print("\nInterrupted by user, exiting...")
 finally:
-    # 释放资源
+    # Release resources
     cap.release()
     cv2.destroyAllWindows()
 ```

@@ -23,7 +23,7 @@ Control a motor through the CAN interface.
 ### Hardware Connection
 
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/can-hardware-connection.jpg" alt="Connection diagram" width="40%" /><br/>
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/can-hardware-connection.jpg" alt="Connection diagram" width="70%" /><br/>
 
 :::info Note
 

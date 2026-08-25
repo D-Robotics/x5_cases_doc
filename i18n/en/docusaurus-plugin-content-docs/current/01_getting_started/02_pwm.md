@@ -27,7 +27,7 @@ Control a servo to a specified angle through the PWM interface.
 
 This case uses an MG90S servo. Yellow is the signal wire, red is positive, and brown is negative.
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/pwm-hardware-connection.jpg" alt="Connection diagram" width="40%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/pwm-hardware-connection.jpg" alt="Connection diagram" width="70%" />
 
 #### Pin Mapping
 
@@ -44,7 +44,7 @@ The mapping between servo pins and board pins is shown below. Board pin numbers 
 
 #### 40-Pin Header Definition
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/01_40pin_user_sample/image/40pin_user_sample/image-20241217-202319.png" alt="40-pin header definition" width="100%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/40pin.png" alt="40-pin header definition" width="100%" />
 
 ## Sample Code
 

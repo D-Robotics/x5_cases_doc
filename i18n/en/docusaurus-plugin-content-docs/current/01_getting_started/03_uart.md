@@ -19,7 +19,7 @@ Run a UART loopback test. On the RDK X5 development board, the device path is `/
 
 ### Hardware Connection
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/uart-hardware-connection.jpg" alt="Connection diagram" width="80%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/uart-hardware-connection.jpg" alt="Connection diagram" width="70%" />
 
 #### Pin Mapping
 
@@ -37,7 +37,7 @@ In normal use, connect the external device RX pin to the board TX pin, and the d
 
 #### 40-Pin Header Definition
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/01_40pin_user_sample/image/40pin_user_sample/image-20241217-202319.png" alt="40-pin header definition" width="100%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/40pin.png" alt="40-pin header definition" width="100%" />
 
 ## Sample Code
 

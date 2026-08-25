@@ -27,7 +27,7 @@ PWM（Pulse Width Modulation，脉宽调制）接口提供高精度可编程脉�
 
 该案例使用的 MG90S 舵机，黄色为信号线，红色为正极，棕色为负极。
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/pwm-hardware-connection.jpg" alt="连接示意图" width="40%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/pwm-hardware-connection.jpg" alt="连接示意图" width="70%" />
 
 #### 接口说明
 

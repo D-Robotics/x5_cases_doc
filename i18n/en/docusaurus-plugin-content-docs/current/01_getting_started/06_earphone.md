@@ -19,7 +19,7 @@ Record and play audio through the earphone audio jack.
 
 ### Hardware Connection
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/earphone-hardware-connection.jpg" alt="Connection diagram" width="40%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/earphone-hardware-connection.jpg" alt="Connection diagram" width="70%" />
 
 
 ## Sample Code

@@ -20,7 +20,7 @@ Capture button press events through GPIO.
 
 ### Hardware Connection
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gpio-hardware-connection.jpg" alt="Hardware connection diagram" width="100%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gpio-hardware-connection.jpg" alt="Hardware connection diagram" width="70%" />
 
 #### Pin Mapping
 
@@ -38,7 +38,7 @@ The mapping between button module pins and board pins is shown below. Board pin 
 
 #### 40-Pin Header Definition
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/01_40pin_user_sample/image/40pin_user_sample/image-20241217-202319.png" alt="40-pin header definition" width="100%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/40pin.png" alt="40-pin header definition" width="100%" />
 
 
 

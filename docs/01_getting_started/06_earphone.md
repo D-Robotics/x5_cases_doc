@@ -19,7 +19,7 @@ Earphone 音频口是一种用于音频信号输出的接口，通过模拟音�
 
 ### 硬件连接
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/earphone-hardware-connection.jpg" alt="连接示意图" width="40%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/earphone-hardware-connection.jpg" alt="连接示意图" width="70%" />
 
 
 ## 案例代码

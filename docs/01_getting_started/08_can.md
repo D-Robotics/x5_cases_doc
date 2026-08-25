@@ -23,7 +23,7 @@ CAN（Controller Area Network，控制器局域网络）是一种面向实时控
 ### 硬件连接
 
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/can-hardware-connection.jpg" alt="连接示意图" width="40%" /><br/>
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/can-hardware-connection.jpg" alt="连接示意图" width="70%" /><br/>
 
 :::info 说明
 

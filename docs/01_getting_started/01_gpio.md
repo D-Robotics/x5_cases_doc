@@ -21,7 +21,7 @@ GPIO（General Purpose Input/Output）接口提供灵活的通用数字信号扩
 
 ### 硬件连接
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gpio-hardware-connection.jpg" alt="硬件连接示意图" width="100%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gpio-hardware-connection.jpg" alt="硬件连接示意图" width="70%" />
 
 #### 接口说明
 

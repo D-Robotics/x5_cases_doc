@@ -19,7 +19,7 @@ UART（Universal Asynchronous Receiver/Transmitter，通用异步收发传输器
 
 ### 硬件连接
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/uart-hardware-connection.jpg" alt="连接示意图" width="80%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/uart-hardware-connection.jpg" alt="连接示意图" width="70%" />
 
 #### 接口说明
 

@@ -83,11 +83,11 @@ After startup, view the result in a browser on the PC. The PC and the board must
 **Open `board-IP:8000` to view the algorithm recognition result**
 
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gesture-detection-result.jpg" alt="gesture-detection-result" width="80%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gesture-detection-result.jpg" alt="gesture-detection-result" width="100%" />
 
 **Open `board-IP:8088` to try the gesture interaction game**
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gesture-game-result.jpg" alt="gesture-game-result" width="80%" /><br/>
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gesture-game-result.jpg" alt="gesture-game-result" width="100%" /><br/>
 
 <video controls width="100%" preload="metadata">
   <source src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/game.mp4" type="video/mp4" />

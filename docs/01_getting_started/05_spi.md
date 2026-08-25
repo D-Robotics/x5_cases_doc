@@ -20,7 +20,7 @@ SPI（Serial Peripheral Interface，串行外设接口）提供高速同步串�
 ### 硬件连接
 
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/spi-hardware-connection.jpg" alt="连接示意图" width="40%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/spi-hardware-connection.jpg" alt="连接示意图" width="70%" />
 
 
 #### 接口说明
