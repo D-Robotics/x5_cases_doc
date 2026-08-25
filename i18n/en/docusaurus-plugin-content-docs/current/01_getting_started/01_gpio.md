@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# GPIO Interface
+# 1. GPIO Interface
 
 ### Interface Overview
 

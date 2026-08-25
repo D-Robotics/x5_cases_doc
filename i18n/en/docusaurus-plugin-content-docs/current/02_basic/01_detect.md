@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Object Detection
+# 1. Object Detection
 
 
 Object Detection is a core computer-vision task. It identifies and localizes objects in images or video (such as people, vehicles, and animals), usually with bounding boxes. It is widely used in security monitoring, autonomous driving, and industrial inspection. Representative models include YOLO, R-CNN, and DETR.

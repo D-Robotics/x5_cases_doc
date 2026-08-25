@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# UART Interface
+# 1. UART Interface
 
 ### Interface Overview
 

@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# USB Interface
+# 1. USB Interface
 
 ### Interface Overview
 

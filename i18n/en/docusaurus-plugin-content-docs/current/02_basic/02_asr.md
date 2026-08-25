@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Speech-to-Text (ASR)
+# 1. Speech-to-Text (ASR)
 
 
 ASR (Automatic Speech Recognition) converts spoken language into text in real time. It is a foundation for voice assistants, meeting notes, intelligent customer service, and voice input.

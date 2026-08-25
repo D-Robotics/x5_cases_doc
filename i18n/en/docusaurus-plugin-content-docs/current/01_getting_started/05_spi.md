@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# SPI Interface
+# 1. SPI Interface
 
 ### Interface Overview
 

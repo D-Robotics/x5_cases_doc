@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Earphone Audio Jack
+# 1. Earphone Audio Jack
 
 ### Interface Overview
 

@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# PWM Interface
+# 1. PWM Interface
 
 ### Interface Overview
 

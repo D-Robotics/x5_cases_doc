@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# CAN Interface
+# 1. CAN Interface
 
 ### Interface Overview
 

@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# SPI 接口
+# 1. SPI 接口
 
 ### 接口介绍
 

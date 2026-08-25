@@ -7,36 +7,36 @@
     "message": "X5 Application Cases",
     "description": "The label for category X5 应用案例 in sidebar docsSidebar"
   },
-  "sidebar.docsSidebar.category.入门案例": {
-    "message": "Getting Started Cases",
-    "description": "The label for category 入门案例 in sidebar docsSidebar"
+  "sidebar.docsSidebar.category.1. 入门案例": {
+    "message": "1. Getting Started Cases",
+    "description": "The label for category 1. 入门案例 in sidebar docsSidebar"
   },
-  "sidebar.docsSidebar.category.入门案例.link.generated-index.description": {
+  "sidebar.docsSidebar.category.1. 入门案例.link.generated-index.description": {
     "message": "Tutorials for using onboard peripheral interfaces.",
-    "description": "The generated-index page description for category 入门案例 in sidebar docsSidebar"
+    "description": "The generated-index page description for category 1. 入门案例 in sidebar docsSidebar"
   },
-  "sidebar.docsSidebar.category.初阶案例": {
-    "message": "Basic Cases",
-    "description": "The label for category 初阶案例 in sidebar docsSidebar"
+  "sidebar.docsSidebar.category.2. 初阶案例": {
+    "message": "2. Basic Cases",
+    "description": "The label for category 2. 初阶案例 in sidebar docsSidebar"
   },
-  "sidebar.docsSidebar.category.初阶案例.link.generated-index.description": {
+  "sidebar.docsSidebar.category.2. 初阶案例.link.generated-index.description": {
     "message": "Entry-level vision and speech AI application cases.",
-    "description": "The generated-index page description for category 初阶案例 in sidebar docsSidebar"
+    "description": "The generated-index page description for category 2. 初阶案例 in sidebar docsSidebar"
   },
-  "sidebar.docsSidebar.category.进阶案例": {
-    "message": "Intermediate Cases",
-    "description": "The label for category 进阶案例 in sidebar docsSidebar"
+  "sidebar.docsSidebar.category.3. 进阶案例": {
+    "message": "3. Intermediate Cases",
+    "description": "The label for category 3. 进阶案例 in sidebar docsSidebar"
   },
-  "sidebar.docsSidebar.category.进阶案例.link.generated-index.description": {
+  "sidebar.docsSidebar.category.3. 进阶案例.link.generated-index.description": {
     "message": "Interactive AI application cases.",
-    "description": "The generated-index page description for category 进阶案例 in sidebar docsSidebar"
+    "description": "The generated-index page description for category 3. 进阶案例 in sidebar docsSidebar"
   },
-  "sidebar.docsSidebar.category.高阶案例": {
-    "message": "Advanced Cases",
-    "description": "The label for category 高阶案例 in sidebar docsSidebar"
+  "sidebar.docsSidebar.category.4. 高阶案例": {
+    "message": "4. Advanced Cases",
+    "description": "The label for category 4. 高阶案例 in sidebar docsSidebar"
   },
-  "sidebar.docsSidebar.category.高阶案例.link.generated-index.description": {
+  "sidebar.docsSidebar.category.4. 高阶案例.link.generated-index.description": {
     "message": "Comprehensive cases such as a multimodal chatbot.",
-    "description": "The generated-index page description for category 高阶案例 in sidebar docsSidebar"
+    "description": "The generated-index page description for category 4. 高阶案例 in sidebar docsSidebar"
   }
 }

@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Text-to-Speech (TTS)
+# 1. Text-to-Speech (TTS)
 
 TTS (Text To Speech) synthesizes natural spoken audio from text. AI algorithms simulate human pronunciation and play the content in real time. TTS is a foundation for intelligent assistants, human-machine interaction, customer service, in-vehicle systems, and robot voice interaction. It improves how devices deliver information and interact naturally.
 

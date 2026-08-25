@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Chatbot
+# 1. Chatbot
 
 
 A Large Language Model (LLM) is an AI model trained with deep learning on large-scale text. It can understand, generate, reason, and answer questions in natural language. It interprets user text or speech and produces semantically appropriate replies or actions. Through pretraining and instruction tuning, it learns language knowledge and reasoning, then uses context for dialogue, content creation, task planning, code generation, and more. LLMs are a core capability for intelligent robots, smart terminals, office assistants, and AI agents. They significantly improve natural interaction, knowledge services, and intelligent decision-making.

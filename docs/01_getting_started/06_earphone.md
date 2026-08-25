@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Earphone 音频口
+# 1. Earphone 音频口
 
 ### 接口介绍
 

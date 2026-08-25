@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# 语音转文字（ASR）
+# 1. 语音转文字（ASR）
 
 
 ASR（Automatic Speech Recognition，自动语音识别）即语音转文字技术，是一种将人类语音实时转换为文本的技术，是语音助手、会议纪要、智能客服和语音输入等应用的重要基础。
