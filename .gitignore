@@ -32,8 +32,22 @@ translate_doc.py
 GEMINI.md
 
 yarn.lock
+pnpm-lock.yaml
 # package-lock.json
 
 .idea
 
+.env
 .env.local
+
+# Python cache and one-off conversion artifacts (not needed to run the site)
+__pycache__/
+*.py[cod]
+*.pyo
+pdf_extract.txt
+error.txt
+download_imgs.py
+scripts/extract_pdf.py
+scripts/docx_to_docs.py
+scripts/finish-docs-folder-renames.ps1
+scripts/update-chapter-path-refs.mjs
