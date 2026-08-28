@@ -195,4 +195,4 @@ python3 usb_audio.py --device plughw:1,0
 python3 usb_audio.py --file xxx.wav --device plughw:1,0  
 ```
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/earphone-running-result.jpg" alt="Running result" width="100%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/earphone-running-result.jpg" alt="Running result" width="80%" />

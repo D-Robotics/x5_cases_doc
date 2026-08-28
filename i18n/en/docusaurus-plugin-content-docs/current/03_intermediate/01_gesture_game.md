@@ -14,7 +14,7 @@ Gesture interaction uses computer vision and AI to recognize hand motion, postur
 
 This feature includes body detection, hand landmark detection, and gesture recognition. It uses ROS, and recognition is split across multiple nodes. The feature is packaged in TROS. The pipeline is as follows:
 
-<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gesture-game-pipeline.png" alt="gesture-game-pipeline" width="100%" />
+<img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/gesture_pipeline_en.png" alt="gesture-game-pipeline" width="100%" />
 
 The message type is PerceptionTargets. For gesture message handling, see the `on_gesture_msg` function in the sample code. Get the sample code in [Environment Setup](#environment-setup).
 
@@ -90,5 +90,5 @@ After startup, view the result in a browser on the PC. The PC and the board must
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gesture-game-result.jpg" alt="gesture-game-result" width="100%" /><br/>
 
 <video controls width="100%" preload="metadata">
-  <source src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/game.mp4" type="video/mp4" />
+  <source src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/game.mp4" type="video/mp4" />
 </video>
