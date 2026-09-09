@@ -30,7 +30,7 @@ pip install sentencepiece pypinyin
 ### 拉取 LLM 大模型
 
 ```shell
-https://archive.d-robotics.cc/downloads/rdk_demo/rdk_x5_demo/qwen2.5-1.5b-instruct-q5_k_m.gguf
+wget https://archive.d-robotics.cc/downloads/rdk_demo/rdk_x5_demo/qwen2.5-1.5b-instruct-q5_k_m.gguf
 ```
 
 ### 编译 sherpa-onnx
@@ -90,9 +90,28 @@ colcon build --packages-select qwen_llm --cmake-args -DPLATFORM_X5=ON
 
 :::info 说明
 
-- 该功能获取麦克风输入，进行ASR，请在安静的环境中体验，建议使用带去噪的音频设备
+- 该功能获取麦克风输入，进行ASR，请在安静的环境中体验，建议使用带去噪的音频设备。
 - 运行时指定音频设备请参考[Earphone 音频口](../getting_started/earphone#查看设备) 章节，更多配置请查看案例代码的 README。
 :::
+
+:::warning 路径与设备均为示例
+
+以下命令中的工作空间路径、模型配置目录、模型文件路径和音频设备名称均为示例值，请根据本机实际环境修改，并在执行前确认对应文件、目录和设备均存在。
+:::
+
+#### 启动命令参数说明
+
+| 参数或命令 | 作用 | 需确认内容 |
+| :--- | :--- | :--- |
+| `source /opt/tros/humble/setup.bash` | 加载 RDK X5 的 ROS 2 环境 | 系统环境脚本是否存在 |
+| `source chat_ws/install/setup.bash` | 加载聊天机器人工作空间 | `chat_ws` 是否位于当前目录 |
+| `ros2 launch audio_io audio_io.launch.py` | 启动音频输入、语音识别和语音合成相关节点 | 工作空间是否已正确编译并加载 |
+| `ros2 launch qwen_llm qwen_llm.launch.py` | 启动 LLM 推理节点 | 工作空间是否已正确编译并加载 |
+| `micphone_name` | 指定麦克风设备 | 设备名称是否与当前使用的音频设备一致 |
+| `tts_config_path` | 指定 TTS 模型配置目录 | 目录是否存在并包含完整模型文件 |
+| `asr_model_path` | 指定 ASR 模型文件 | 文件路径和文件名是否正确 |
+| `kws_config_path` | 指定 KWS 模型配置目录 | 目录是否存在并包含完整模型文件 |
+| `llm_model_path` | 指定 LLM 模型文件 | 修改为下载后的模型文件实际路径 |
 
 ```shell
 #设置TTS，ASR，KWS模型路径
