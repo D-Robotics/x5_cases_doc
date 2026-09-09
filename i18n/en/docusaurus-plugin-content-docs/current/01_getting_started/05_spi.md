@@ -431,6 +431,6 @@ for color in ((255, 0, 0), (0, 255, 0), (0, 0, 255)):
 - **Garbled screen or partially corrupted image**: troubleshoot in the following order.
   1. Switch SPI mode: `--spi-mode` supports 0/1/2/3 (default 0). If the screen is garbled, try `--spi-mode 3`.
   2. Lower the SPI clock frequency: `--speed` defaults to 24 MHz. If the screen is still garbled, reduce it and retry.
-  3. Check the wiring (see "Pin Mapping" and "Hardware Connection" above).
+  3. Check the wiring , see [Pin Mapping](#pin-mapping) and [Hardware Connection](#hardware-connection) above.
 
 Different panel models may require different configurations. Do not treat a single set of parameters as a fixed setting for all panels.
