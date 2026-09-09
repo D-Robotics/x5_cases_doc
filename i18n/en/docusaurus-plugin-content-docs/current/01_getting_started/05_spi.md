@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# 1. SPI Interface
+# 5. SPI Interface
 
 ### Interface Overview
 
@@ -82,8 +82,10 @@ class ST7789:
         x_offset: int,
         y_offset: int,
         speed_hz: int,
+        spi_mode: int,
         rotation: int,
         bgr: bool,
+        invert: bool,
     ) -> None:
         self.width = width
         self.height = height
@@ -94,6 +96,7 @@ class ST7789:
         self.bl_pin = bl_pin
         self.rotation = rotation % 360
         self.bgr = bgr
+        self.invert = invert
 
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BOARD)
@@ -104,7 +107,7 @@ class ST7789:
 
         self.spi = spidev.SpiDev()
         self.spi.open(bus, device)
-        self.spi.mode = 0
+        self.spi.mode = spi_mode
         self.spi.bits_per_word = 8
         self.spi.max_speed_hz = speed_hz
 
@@ -134,7 +137,8 @@ class ST7789:
         self.hard_reset()
         self.command(0x36, [self._madctl()])
         self.command(0x3A, [0x05])  # 16-bit RGB565 (Waveshare 2inch)
-        self.command(0x21)  # Display inversion on
+        # Display inversion: 0x21 enables, 0x20 disables. Different panel models have different requirements; toggle --invert when colors look off.
+        self.command(0x21 if self.invert else 0x20)
         self.command(0x2A, [0x00, 0x00, 0x01, 0x3F])
         self.command(0x2B, [0x00, 0x00, 0x00, 0xEF])
         self.command(0xB2, [0x0C, 0x0C, 0x00, 0x33, 0x33])
@@ -205,10 +209,10 @@ def rgb888_to_rgb565(image: Image.Image) -> bytes:
 def load_image(path, width, height):
     image = Image.open(path)
 
-    # 转 RGB
+    # Convert to RGB
     image = image.convert("RGB")
 
-    # 缩放到LCD大小
+    # Resize to the LCD size
     image = image.resize(
         (width, height),
         Image.Resampling.LANCZOS
@@ -241,8 +245,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--x-offset", type=int, default=0)
     parser.add_argument("--y-offset", type=int, default=0)
     parser.add_argument("--speed", type=int, default=24_000_000)
+    parser.add_argument("--spi-mode", type=int, default=0, choices=(0, 1, 2, 3), help="SPI mode. Try 3 if the screen shows tearing/garbled output.")
     parser.add_argument("--rotation", type=int, default=0, choices=(0, 90, 180, 270))
     parser.add_argument("--bgr", action="store_true", help="Clear BGR bit if red/blue appear swapped.")
+    parser.add_argument("--invert", action="store_true", help="Enable display color inversion (0x21). Toggle if colors appear inverted.")
     parser.add_argument("--image",type=str,default=None,help="image path")
     return parser.parse_args()
 
@@ -306,8 +312,10 @@ def main() -> int:
         x_offset=args.x_offset,
         y_offset=args.y_offset,
         speed_hz=args.speed,
+        spi_mode=args.spi_mode,
         rotation=args.rotation,
         bgr=args.bgr,
+        invert=args.invert,
     )
 
     margin = 24
@@ -324,6 +332,13 @@ def main() -> int:
     try:
         lcd.init()
         print("Animation running. Press Ctrl+C to stop.")
+        # ==== Color self-test (commented out by default; uncomment only when troubleshooting color issues) ====
+        # Shows solid red, green, and blue in turn to verify each color channel.
+        # for color in ((255, 0, 0), (0, 255, 0), (0, 0, 255)):
+        #     solid = Image.new("RGB", (args.width, args.height), color)
+        #     lcd.show(solid)
+        #     time.sleep(2)
+        # ====================================================
         if(args.image == None):
             while True:
                 t0 = time.time()
@@ -393,3 +408,29 @@ python3 spi_display.py --image xxxx.jpg
 <video controls width="100%" preload="metadata">
   <source src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/spi-running-result.mp4" type="video/mp4" />
 </video>
+
+## Troubleshooting Color Display Issues
+
+Different SPI panel models may have different requirements for color inversion, SPI mode, and clock frequency. Using the default configuration from this sample as-is may cause the displayed colors to differ from the original image or produce a garbled screen. If the display looks abnormal, troubleshoot as follows.
+
+### Color Self-Test
+
+A normal image contains many colors, making it hard to tell at a glance whether each color channel is working correctly. It is recommended to display solid red, green, and blue in turn to clearly verify each channel. This sample includes a built-in solid-color self-test right after `lcd.init()` (commented out by default); uncomment it when troubleshooting color issues:
+
+```python
+# Display solid red, green, and blue in turn
+for color in ((255, 0, 0), (0, 255, 0), (0, 0, 255)):
+    solid = Image.new("RGB", (args.width, args.height), color)
+    lcd.show(solid)
+    time.sleep(2)
+```
+
+### Troubleshooting Order
+
+- **Colors are off (e.g. red shows as cyan)**: the color inversion setting is wrong. Use the `--invert` flag to toggle inversion and compare the solid-color results with it on and off, then choose the configuration that matches your panel. If red and blue are swapped (rather than inverted), use the `--bgr` flag.
+- **Garbled screen or partially corrupted image**: troubleshoot in the following order.
+  1. Switch SPI mode: `--spi-mode` supports 0/1/2/3 (default 0). If the screen is garbled, try `--spi-mode 3`.
+  2. Lower the SPI clock frequency: `--speed` defaults to 24 MHz. If the screen is still garbled, reduce it and retry.
+  3. Check the wiring (see "Pin Mapping" and "Hardware Connection" above).
+
+Different panel models may require different configurations. Do not treat a single set of parameters as a fixed setting for all panels.

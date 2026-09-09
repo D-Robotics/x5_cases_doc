@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# 1. SPI 接口
+# 5. SPI 接口
 
 ### 接口介绍
 
@@ -82,8 +82,10 @@ class ST7789:
         x_offset: int,
         y_offset: int,
         speed_hz: int,
+        spi_mode: int,
         rotation: int,
         bgr: bool,
+        invert: bool,
     ) -> None:
         self.width = width
         self.height = height
@@ -94,6 +96,7 @@ class ST7789:
         self.bl_pin = bl_pin
         self.rotation = rotation % 360
         self.bgr = bgr
+        self.invert = invert
 
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BOARD)
@@ -104,7 +107,7 @@ class ST7789:
 
         self.spi = spidev.SpiDev()
         self.spi.open(bus, device)
-        self.spi.mode = 0
+        self.spi.mode = spi_mode
         self.spi.bits_per_word = 8
         self.spi.max_speed_hz = speed_hz
 
@@ -134,7 +137,8 @@ class ST7789:
         self.hard_reset()
         self.command(0x36, [self._madctl()])
         self.command(0x3A, [0x05])  # 16-bit RGB565 (Waveshare 2inch)
-        self.command(0x21)  # Display inversion on
+        # 颜色反相：0x21 开启、0x20 关闭。不同屏幕型号要求不同，偏色时切换 --invert。
+        self.command(0x21 if self.invert else 0x20)
         self.command(0x2A, [0x00, 0x00, 0x01, 0x3F])
         self.command(0x2B, [0x00, 0x00, 0x00, 0xEF])
         self.command(0xB2, [0x0C, 0x0C, 0x00, 0x33, 0x33])
@@ -241,8 +245,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--x-offset", type=int, default=0)
     parser.add_argument("--y-offset", type=int, default=0)
     parser.add_argument("--speed", type=int, default=24_000_000)
+    parser.add_argument("--spi-mode", type=int, default=0, choices=(0, 1, 2, 3), help="SPI mode. Try 3 if the screen shows tearing/garbled output.")
     parser.add_argument("--rotation", type=int, default=0, choices=(0, 90, 180, 270))
     parser.add_argument("--bgr", action="store_true", help="Clear BGR bit if red/blue appear swapped.")
+    parser.add_argument("--invert", action="store_true", help="Enable display color inversion (0x21). Toggle if colors appear inverted.")
     parser.add_argument("--image",type=str,default=None,help="image path")
     return parser.parse_args()
 
@@ -306,8 +312,10 @@ def main() -> int:
         x_offset=args.x_offset,
         y_offset=args.y_offset,
         speed_hz=args.speed,
+        spi_mode=args.spi_mode,
         rotation=args.rotation,
         bgr=args.bgr,
+        invert=args.invert,
     )
 
     margin = 24
@@ -324,6 +332,13 @@ def main() -> int:
     try:
         lcd.init()
         print("Animation running. Press Ctrl+C to stop.")
+        # ==== 颜色自检（默认注释，仅在排查色差问题时取消注释）====
+        # 依次显示红、绿、蓝三种纯色，用于判断各颜色通道是否正常。
+        # for color in ((255, 0, 0), (0, 255, 0), (0, 0, 255)):
+        #     solid = Image.new("RGB", (args.width, args.height), color)
+        #     lcd.show(solid)
+        #     time.sleep(2)
+        # ====================================================
         if(args.image == None):
             while True:
                 t0 = time.time()
@@ -393,3 +408,29 @@ python3 spi_display.py --image xxxx.jpg
 <video controls width="100%" preload="metadata">
   <source src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/spi-running-result.mp4" type="video/mp4" />
 </video>
+
+## 颜色显示异常排查
+
+不同型号的 SPI 屏幕对颜色反相、SPI Mode 和时钟频率的要求可能不同，直接沿用本示例的默认配置可能导致显示颜色与原图不一致或出现花屏。遇到显示异常时，请按下述方法排查。
+
+### 颜色自检
+
+普通图片包含多种颜色，难以直接判断颜色通道是否正常。建议依次显示红、绿、蓝三种纯色，明确判断各颜色通道是否正常。本示例代码在 `lcd.init()` 之后内置了纯色自检逻辑（默认注释），排查颜色问题时取消注释即可：
+
+```python
+# 依次显示红、绿、蓝三种纯色
+for color in ((255, 0, 0), (0, 255, 0), (0, 0, 255)):
+    solid = Image.new("RGB", (args.width, args.height), color)
+    lcd.show(solid)
+    time.sleep(2)
+```
+
+### 排查顺序
+
+- **颜色偏色（如红色显示为青色）**：颜色反相配置不正确。使用 `--invert` 参数切换反相开关，对比开启与关闭时的纯色显示结果，选择与本机屏幕匹配的配置；若红色与蓝色互换（而非反相），则使用 `--bgr` 参数。
+- **花屏或局部图像错乱**：按下述顺序排查。
+  1. 切换 SPI Mode：`--spi-mode` 支持 0/1/2/3，默认 0；若出现花屏可尝试 `--spi-mode 3`。
+  2. 降低 SPI 时钟频率：`--speed` 默认 24 MHz，仍花屏时适当降低后重试。
+  3. 检查接线是否正确（参考上文"接口说明"与"硬件连接"）。
+
+不同屏幕型号可能需要不同配置，请勿将单一参数作为所有屏幕的固定设置。
