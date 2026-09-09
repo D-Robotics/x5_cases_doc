@@ -30,7 +30,7 @@ pip install sentencepiece pypinyin
 ### 拉取 LLM 大模型
 
 ```shell
-https://archive.d-robotics.cc/downloads/rdk_demo/rdk_x5_demo/qwen2.5-1.5b-instruct-q5_k_m.gguf
+wget https://archive.d-robotics.cc/downloads/rdk_demo/rdk_x5_demo/qwen2.5-1.5b-instruct-q5_k_m.gguf
 ```
 
 ### 编译 sherpa-onnx
