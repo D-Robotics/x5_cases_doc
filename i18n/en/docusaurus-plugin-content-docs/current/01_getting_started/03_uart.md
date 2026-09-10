@@ -1,29 +1,25 @@
 ---
+title: UART Interface
+description: Use the RDK X5 UART interface for serial communication and run a loopback test via /dev/ttyS1.
 sidebar_position: 3
 ---
 
-# 1. UART Interface
+# UART Interface
 
-### Interface Overview
-
+## Interface Overview
 The UART (Universal Asynchronous Receiver/Transmitter) interface provides reliable serial communication for sending and receiving data between devices. It is simple, easy to extend, and widely compatible. Typical uses include connecting sensors, communication modules, debug tools, and other embedded peripherals for status monitoring, data transfer, and device control.
 
-### Case Objective
-
+## Case Objective
 Run a UART loopback test. On the RDK X5 development board, the device path is `/dev/ttyS1`.
 
-### Required Hardware
-
+## Required Hardware
 - RDK X5 development board
 - Jumper cap
 
-### Hardware Connection
-
+## Hardware Connection
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/uart-hardware-connection.jpg" alt="Connection diagram" width="70%" />
 
-#### Pin Mapping
-
-
+### Pin Mapping
 :::info Note
 
 In normal use, connect the external device RX pin to the board TX pin, and the device TX pin to the board RX pin.
@@ -35,8 +31,7 @@ In normal use, connect the external device RX pin to the board TX pin, and the d
 | UART_TX | 8 | Transmit |
 | UART_RX | 10 | Receive |
 
-#### 40-Pin Header Definition
-
+### 40-Pin Header Definition
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/40pin.png" alt="40-pin header definition" width="100%" />
 
 ## Sample Code

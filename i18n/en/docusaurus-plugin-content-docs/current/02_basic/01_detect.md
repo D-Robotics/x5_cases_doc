@@ -1,8 +1,10 @@
 ---
+title: Object Detection
+description: Deploy a YOLO11m model on the RDK X5 for object detection, identifying and locating objects in images.
 sidebar_position: 1
 ---
 
-# 1. Object Detection
+# Object Detection
 
 
 Object Detection is a core computer-vision task. It identifies and localizes objects in images or video (such as people, vehicles, and animals), usually with bounding boxes. It is widely used in security monitoring, autonomous driving, and industrial inspection. Representative models include YOLO, R-CNN, and DETR.

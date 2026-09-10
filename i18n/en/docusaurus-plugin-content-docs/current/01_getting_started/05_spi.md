@@ -1,37 +1,32 @@
 ---
+title: SPI Interface
+description: Use the RDK X5 SPI interface to drive an ST7789 screen, including color display troubleshooting.
 sidebar_position: 5
 ---
 
-# 5. SPI Interface
+# SPI Interface
 
-### Interface Overview
-
+## Interface Overview
 The SPI (Serial Peripheral Interface) provides high-speed synchronous serial communication. It uses a clock line (SCK), data input (MISO), data output (MOSI), and chip select (CS) to transfer data between a host and external devices. SPI is fast, efficient, and simple in hardware. Typical uses include memory chips, display modules, sensors, and other high-speed peripherals.
 
-### Case Objective
-
+## Case Objective
 Control a display through the SPI interface.
 
-### Required Hardware
-
+## Required Hardware
 - RDK X5 development board
 - SPI display
 
-### Hardware Connection
-
-
+## Hardware Connection
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/spi-hardware-connection.jpg" alt="Connection diagram" width="70%" />
 
 
-#### Pin Mapping
-
+### Pin Mapping
 | Pin name | VCC | GND | DIN/MOSI | CLK/SCLK | CS | DC | RST | BL |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Function | Power | Ground | SPI data | SPI clock | Chip select | Command | Reset | Backlight |
 | Board pin | 1 | 39 | 19 | 23 | 24 | 22 | 31 | 33 |
 
-#### 40-Pin Header Definition
-
+### 40-Pin Header Definition
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/40pin.png" alt="40-pin header definition" width="100%" />
 
 

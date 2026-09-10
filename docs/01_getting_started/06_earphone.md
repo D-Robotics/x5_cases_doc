@@ -1,24 +1,22 @@
 ---
+title: Earphone 音频口
+description: 使用 RDK X5 的 Earphone 音频口接入有线耳机，进行音频输入与输出。
 sidebar_position: 6
 ---
 
-# 1. Earphone 音频口
+# Earphone 音频口
 
-### 接口介绍
-
+## 接口介绍
 Earphone 音频口是一种用于音频信号输出的接口，通过模拟音频信号传输实现设备与耳机、扬声器等音频外设之间的声音播放。该接口通常采用标准 3.5mm 音频接口，支持立体声音频输出，具有连接方便、兼容性强、实时性高等特点，可满足语音播报、音频播放、人机交互等应用需求。广泛应用于智能终端、机器人、嵌入式设备、车载系统及多媒体设备等场景。
 
-### 案例目标
-
+## 案例目标
 通过 Earphone 音频口记录声音，播放声音。
 
-### 设备清单
-
+## 设备清单
 - RDK X5 开发板
 - 有线耳机（4 段式）
 
-### 硬件连接
-
+## 硬件连接
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/earphone-hardware-connection.jpg" alt="连接示意图" width="70%" />
 
 

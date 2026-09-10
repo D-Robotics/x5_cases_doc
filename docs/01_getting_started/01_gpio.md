@@ -1,30 +1,27 @@
 ---
+title: GPIO 接口
+description: 使用 RDK X5 的 GPIO 接口进行数字信号输入输出，通过 40PIN 管脚捕获按钮按压事件。
 sidebar_position: 1
 ---
 
-# 1. GPIO 接口
+# GPIO 接口
 
-### 接口介绍
-
+## 接口介绍
 GPIO（General Purpose Input/Output）接口提供灵活的通用数字信号扩展能力，支持输入、输出模式配置，可用于连接传感器、按键、指示灯、继电器及各类外部控制设备。通过软件可实现对外部设备的状态检测与控制，为系统提供丰富的硬件交互能力，满足机器人控制、智能终端及嵌入式应用中的扩展需求。
 
-### 案例目标
-
+## 案例目标
 通过 GPIO 捕获按钮按压事件。
 
 
-### 设备清单
-
+## 设备清单
 - RDK X5 开发板
 - 母对母杜邦线
 - GPIO 按钮模块
 
-### 硬件连接
-
+## 硬件连接
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gpio-hardware-connection.jpg" alt="硬件连接示意图" width="70%" />
 
-#### 接口说明
-
+### 接口说明
 :::info 说明
 
 按钮模块接口名称与板端接口号对应关系如下，板端接口号参考 40PIN 管脚定义表中的 BOARD 编码。
@@ -37,8 +34,7 @@ GPIO（General Purpose Input/Output）接口提供灵活的通用数字信号扩
 | VCC | 1 | 电源 |
 | GND | 39 | 地 |
 
-#### 40PIN 管脚定义
-
+### 40PIN 管脚定义
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/01_40pin_user_sample/image/40pin_user_sample/image-20241217-202319.png" alt="40PIN 管脚定义" width="100%" />
 
 

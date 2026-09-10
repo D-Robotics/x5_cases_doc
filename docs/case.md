@@ -1,6 +1,7 @@
 ---
+title: RDK X5 应用案例手册
+description: 汇总 RDK X5 平台典型应用案例，从外设接口到端侧 AI 推理与多模态交互，按难度递进组织。
 sidebar_position: 1
-slug: /case
 ---
 
 # RDK X5 应用案例手册

@@ -1,6 +1,7 @@
 ---
+title: RDK X5 Application Case Guide
+description: A curated collection of RDK X5 application cases, from peripheral interfaces to on-device AI inference and multimodal interaction, organized by difficulty.
 sidebar_position: 1
-slug: /case
 ---
 
 # RDK X5 Application Case Guide

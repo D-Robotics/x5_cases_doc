@@ -1,29 +1,26 @@
 ---
+title: GPIO Interface
+description: Use the RDK X5 GPIO interface for digital input and output, and capture button presses through the 40-pin header.
 sidebar_position: 1
 ---
 
-# 1. GPIO Interface
+# GPIO Interface
 
-### Interface Overview
-
+## Interface Overview
 The GPIO (General Purpose Input/Output) interface provides flexible digital I/O expansion. It supports input and output modes and can connect sensors, buttons, indicators, relays, and other external devices. Software can detect device status and control peripherals, giving the system rich hardware interaction for robot control, smart terminals, and embedded applications.
 
-### Case Objective
-
+## Case Objective
 Capture button press events through GPIO.
 
-### Required Hardware
-
+## Required Hardware
 - RDK X5 development board
 - Female-to-female jumper wires
 - GPIO button module
 
-### Hardware Connection
-
+## Hardware Connection
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/gpio-hardware-connection.jpg" alt="Hardware connection diagram" width="70%" />
 
-#### Pin Mapping
-
+### Pin Mapping
 :::info Note
 
 The mapping between button module pins and board pins is shown below. Board pin numbers follow the BOARD numbering in the 40-pin header definition.
@@ -36,8 +33,7 @@ The mapping between button module pins and board pins is shown below. Board pin 
 | VCC | 1 | Power |
 | GND | 39 | Ground |
 
-#### 40-Pin Header Definition
-
+### 40-Pin Header Definition
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/40pin.png" alt="40-pin header definition" width="100%" />
 
 

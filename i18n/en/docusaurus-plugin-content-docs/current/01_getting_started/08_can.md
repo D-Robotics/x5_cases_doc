@@ -1,28 +1,25 @@
 ---
+title: CAN Interface
+description: Use the RDK X5 CAN interface to control a GM6020 motor.
 sidebar_position: 8
 ---
 
-# 1. CAN Interface
+# CAN Interface
 
-### Interface Overview
-
+## Interface Overview
 CAN (Controller Area Network) is a serial bus designed for real-time control. Devices exchange data over differential lines (CAN_H and CAN_L). It is robust against interference, highly reliable, and supports multi-node networks. Nodes can communicate in real time without a dedicated host arbiter. Typical uses include automotive electronics, industrial control, robots, smart devices, and motion control.
 
-### Case Objective
-
+## Case Objective
 Control a motor through the CAN interface.
 
-### Required Hardware
-
+## Required Hardware
 - RDK X5 development board
 - Jumper cap
 - CAN motor ([GM6020](https://www.robomaster.com/zh-CN/products/components/general/gm6020))
 - ESC hub board
 - 24 V power adapter
 
-### Hardware Connection
-
-
+## Hardware Connection
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/can-hardware-connection.jpg" alt="Connection diagram" width="70%" /><br/>
 
 :::info Note

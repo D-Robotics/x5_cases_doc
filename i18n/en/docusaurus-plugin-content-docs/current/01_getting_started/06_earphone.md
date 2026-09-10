@@ -1,24 +1,22 @@
 ---
+title: Earphone Audio Jack
+description: Connect a wired earphone to the RDK X5 earphone audio jack for audio input and output.
 sidebar_position: 6
 ---
 
-# 1. Earphone Audio Jack
+# Earphone Audio Jack
 
-### Interface Overview
-
+## Interface Overview
 The earphone audio jack outputs analog audio to headphones, speakers, and other audio peripherals. It typically uses a standard 3.5 mm connector and supports stereo playback. It is easy to connect, widely compatible, and suitable for real-time voice prompts, audio playback, and human-machine interaction on smart terminals, robots, embedded devices, in-vehicle systems, and multimedia products.
 
-### Case Objective
-
+## Case Objective
 Record and play audio through the earphone audio jack.
 
-### Required Hardware
-
+## Required Hardware
 - RDK X5 development board
 - Wired headset (4-pole / TRRS)
 
-### Hardware Connection
-
+## Hardware Connection
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/earphone-hardware-connection.jpg" alt="Connection diagram" width="70%" />
 
 

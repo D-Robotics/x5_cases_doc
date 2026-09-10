@@ -1,8 +1,10 @@
 ---
+title: 关键词唤醒（KWS）
+description: 使用 RDK X5 部署 zipformer 模型进行关键词唤醒，实时识别唤醒词。
 sidebar_position: 3
 ---
 
-# 1. 关键词唤醒（KWS）
+# 关键词唤醒（KWS）
 
 
 KWS（Keyword Spotting，关键词唤醒）即关键词检测技术，是一种实时识别特定唤醒词或关键词的语音识别技术，通过人工智能算法持续监听环境语音，在低功耗条件下快速检测预设的唤醒词，实现设备从待机状态进入语音交互状态。KWS 是智能音箱、智能助手、车载系统、智能家居和机器人语音交互等应用的重要基础，可实现免按键唤醒，降低功耗，提升设备的交互便捷性与用户体验。
@@ -63,7 +65,7 @@ cmake --build build -j6
 - 该功能获取麦克风输入，进行 KWS，请在安静的环境中体验，建议使用带去噪的音频设备。
 - 关键词列表见案例代码：kws_demo_cpp/sherpa-onnx-kws-zipformer-wenetspeech-3.3M-2024-01-01/keywords_raw.txt
 - 自定义关键词方法见 [zipformer](https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#id3) 。
-- 运行时指定音频设备请参考 [Earphone 音频口](../getting_started/earphone#查看设备) 章节。
+- 运行时指定音频设备请参考 [Earphone 音频口](../01_getting_started/06_earphone.md#查看设备) 章节。
 
 :::
 

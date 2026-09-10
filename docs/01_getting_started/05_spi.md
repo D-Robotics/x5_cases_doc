@@ -1,37 +1,32 @@
 ---
+title: SPI 接口
+description: 使用 RDK X5 的 SPI 接口驱动 ST7789 屏幕显示，并附颜色显示异常排查。
 sidebar_position: 5
 ---
 
-# 5. SPI 接口
+# SPI 接口
 
-### 接口介绍
-
+## 接口介绍
 SPI（Serial Peripheral Interface，串行外设接口）提供高速同步串行通信能力，通过时钟线（SCK）、数据输入线（MISO）、数据输出线（MOSI）及片选线（CS）实现主控设备与外部器件之间的数据传输。该接口具有通信速率高、传输效率优、硬件结构简单等特点，广泛应用于存储芯片、显示模块、传感器及各类高速外设连接场景。
 
-### 案例目标
-
+## 案例目标
 通过 SPI 接口控制屏幕显示。
 
-### 设备清单
-
+## 设备清单
 - RDK X5 开发板
 - SPI 屏幕
 
-### 硬件连接
-
-
+## 硬件连接
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/spi-hardware-connection.jpg" alt="连接示意图" width="70%" />
 
 
-#### 接口说明
-
+### 接口说明
 | 接口名称 | VCC | GND | DIN/MOSI | CLK/SCLK | CS | DC | RST | BL |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 功能 | 电源 | 地 | SPI 数据 | SPI 时钟 | 片选 | 命令 | 复位 | 背光 |
 | 板端接口 | 1 | 39 | 19 | 23 | 24 | 22 | 31 | 33 |
 
-#### 40PIN 管脚定义
-
+### 40PIN 管脚定义
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/01_40pin_user_sample/image/40pin_user_sample/image-20241217-202319.png" alt="40PIN 管脚定义" width="100%" />
 
 

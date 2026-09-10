@@ -1,8 +1,10 @@
 ---
+title: Keyword Spotting (KWS)
+description: Deploy a zipformer model on the RDK X5 for keyword spotting, detecting wake words in real time.
 sidebar_position: 3
 ---
 
-# 1. Keyword Spotting (KWS)
+# Keyword Spotting (KWS)
 
 
 KWS (Keyword Spotting) detects a specific wake word or keyword in real time. AI algorithms continuously listen to ambient audio and, at low power, quickly detect a preset wake word so a device can leave standby and start voice interaction. KWS is a foundation for smart speakers, assistants, in-vehicle systems, smart homes, and robot voice interaction. It enables button-free wake-up, reduces power consumption, and makes interaction more convenient.
