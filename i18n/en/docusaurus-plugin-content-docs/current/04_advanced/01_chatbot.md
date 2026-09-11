@@ -94,6 +94,7 @@ colcon build --packages-select qwen_llm --cmake-args -DPLATFORM_X5=ON
 
 - This feature captures microphone input for ASR. Try it in a quiet environment. A noise-canceling audio device is recommended.
 - To specify the audio device at runtime, see [Earphone Audio Jack](../01_getting_started/06_earphone.md#check-the-device). For more configuration, see the README in the sample code.
+- English conversation is not yet supported.
 :::
 
 :::warning Paths and Devices Are Examples

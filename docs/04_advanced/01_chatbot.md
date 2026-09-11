@@ -93,6 +93,7 @@ colcon build --packages-select qwen_llm --cmake-args -DPLATFORM_X5=ON
 
 - 该功能获取麦克风输入，进行 ASR，请在安静的环境中体验，建议使用带去噪的音频设备。
 - 运行时指定音频设备请参考 [Earphone 音频口](../01_getting_started/06_earphone.md#查看设备) 章节，更多配置请查看案例代码的 README。
+- 暂未支持英文对话。
 :::
 
 :::warning 路径与设备均为示例
