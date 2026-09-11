@@ -52,3 +52,4 @@ scripts/extract_pdf.py
 scripts/docx_to_docs.py
 scripts/finish-docs-folder-renames.ps1
 scripts/update-chapter-path-refs.mjs
+.claude/

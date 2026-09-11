@@ -1,19 +1,18 @@
 ---
+title: PWM 接口
+description: 使用 RDK X5 的 PWM 接口输出脉宽调制信号，控制 MG90S 舵机转动到指定角度。
 sidebar_position: 2
 ---
 
-# 1. PWM 接口
+# PWM 接口
 
-### 接口介绍
-
+## 接口介绍
 PWM（Pulse Width Modulation，脉宽调制）接口提供高精度可编程脉冲信号输出能力，通过调节占空比实现对外部设备的精确控制。该接口可用于驱动舵机、电机、LED 灯、蜂鸣器等执行设备，实现速度调节、位置控制、亮度调节等功能，为机器人运动控制、智能硬件交互及嵌入式应用提供灵活可靠的控制方式。
 
-### 案例目标
-
+## 案例目标
 通过 PWM 接口控制舵机转动特定角度。
 
-### 设备清单
-
+## 设备清单
 - RDK X5 开发板
 - 公对母杜邦线
 - PWM 舵机（180°）：PWM 舵机一种基于脉宽调制（PWM）信号进行位置控制的执行机构，通过接收不同脉宽的控制信号，实现指定角度的精准转动。舵机分为 180° 和 360° 两种，控制信息如下：  
@@ -23,14 +22,12 @@ PWM（Pulse Width Modulation，脉宽调制）接口提供高精度可编程脉�
     | 180° | 0° | 45° | 90° | 135° |180°|
     | 360° | 顺时针（快速） | 顺时针（慢速） | 逆时针（慢速） | 逆时针（快速） |停止|
 
-### 硬件连接
-
+## 硬件连接
 该案例使用的 MG90S 舵机，黄色为信号线，红色为正极，棕色为负极。
 
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/pwm-hardware-connection.jpg" alt="连接示意图" width="70%" />
 
-#### 接口说明
-
+### 接口说明
 :::info 说明
 
 舵机接口名称与板端接口号对应关系如下，板端接口号参考 40PIN 管脚定义表中的 BOARD 编码。
@@ -42,8 +39,7 @@ PWM（Pulse Width Modulation，脉宽调制）接口提供高精度可编程脉�
 | VCC | 1 | 电源 |
 | GND | 39 | 地 |
 
-#### 40PIN 管脚定义
-
+### 40PIN 管脚定义
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/01_40pin_user_sample/image/40pin_user_sample/image-20241217-202319.png" alt="40PIN 管脚定义" width="100%" />
 
 ## 案例代码

@@ -1,19 +1,18 @@
 ---
+title: PWM Interface
+description: Use the RDK X5 PWM interface to output pulse-width modulation signals and drive an MG90S servo to a target angle.
 sidebar_position: 2
 ---
 
-# 1. PWM Interface
+# PWM Interface
 
-### Interface Overview
-
+## Interface Overview
 The PWM (Pulse Width Modulation) interface provides programmable pulse output. By adjusting the duty cycle, it can precisely control external devices such as servos, motors, LEDs, and buzzers for speed, position, and brightness control. It is a flexible control method for robot motion, smart hardware, and embedded applications.
 
-### Case Objective
-
+## Case Objective
 Control a servo to a specified angle through the PWM interface.
 
-### Required Hardware
-
+## Required Hardware
 - RDK X5 development board
 - Male-to-female jumper wires
 - PWM servo (180°): a PWM servo is an actuator that uses pulse-width modulation for position control. Different pulse widths drive it to a specified angle. Servos come in 180° and 360° types. The control mapping is:
@@ -23,14 +22,12 @@ Control a servo to a specified angle through the PWM interface.
     | 180° | 0° | 45° | 90° | 135° | 180° |
     | 360° | Clockwise (fast) | Clockwise (slow) | Counterclockwise (slow) | Counterclockwise (fast) | Stop |
 
-### Hardware Connection
-
+## Hardware Connection
 This case uses an MG90S servo. Yellow is the signal wire, red is positive, and brown is negative.
 
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/pwm-hardware-connection.jpg" alt="Connection diagram" width="70%" />
 
-#### Pin Mapping
-
+### Pin Mapping
 :::info Note
 
 The mapping between servo pins and board pins is shown below. Board pin numbers follow the BOARD numbering in the 40-pin header definition.
@@ -42,8 +39,7 @@ The mapping between servo pins and board pins is shown below. Board pin numbers 
 | VCC | 1 | Power |
 | GND | 39 | Ground |
 
-#### 40-Pin Header Definition
-
+### 40-Pin Header Definition
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/en/40pin.png" alt="40-pin header definition" width="100%" />
 
 ## Sample Code

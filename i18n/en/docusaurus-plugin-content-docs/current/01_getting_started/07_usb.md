@@ -1,25 +1,22 @@
 ---
+title: USB Interface
+description: Connect a USB camera to the RDK X5 USB interface and display the video stream in real time.
 sidebar_position: 7
 ---
 
-# 1. USB Interface
+# USB Interface
 
-### Interface Overview
-
+## Interface Overview
 The USB interface uses the standard USB protocol and supports both power delivery and high-speed data transfer. It can connect cameras, keyboards, mice, USB drives, wireless adapters, speakers, and many other peripherals, with good compatibility and expandability. Depending on the connector specification, it can provide multi-Gbps bandwidth for high-speed data capture, model deployment, peripheral access, and debugging.
 
-### Case Objective
-
+## Case Objective
 Open a USB camera and display the video stream in real time.
 
-### Required Hardware
-
+## Required Hardware
 - RDK X5 development board
 - USB camera
 
-### Hardware Connection
-
-
+## Hardware Connection
 Plug the USB camera into a USB port on the RDK X5 development board.
 
 ## Create usb_camera.py

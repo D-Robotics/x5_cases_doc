@@ -1,29 +1,25 @@
 ---
+title: UART 接口
+description: 使用 RDK X5 的 UART 接口进行串行通信，并通过 /dev/ttyS1 完成回环测试。
 sidebar_position: 3
 ---
 
-# 1. UART 接口
+# UART 接口
 
-### 接口介绍
-
+## 接口介绍
 UART（Universal Asynchronous Receiver/Transmitter，通用异步收发传输器）接口提供稳定可靠的串行通信能力，支持设备间进行数据收发与信息交互。该接口具有结构简单、易于扩展、兼容性强等特点，可用于连接传感器、通信模块、调试设备及其他嵌入式外设，实现系统状态监测、数据传输与设备控制。
 
-### 案例目标
-
+## 案例目标
 通过 UART 接口进行回环测试，RDK X5 开发板使用设备路径为 `/dev/ttyS1`。
 
-### 设备清单
-
+## 设备清单
 - RDK X5 开发板
 - 跳线帽
 
-### 硬件连接
-
+## 硬件连接
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/uart-hardware-connection.jpg" alt="连接示意图" width="70%" />
 
-#### 接口说明
-
-
+### 接口说明
 :::info 说明
 
 正常使用中，外接设备的 RX 端口接开发板的 TX 端口，设备的 TX 端口接开发板的 RX 端口。
@@ -35,8 +31,7 @@ UART（Universal Asynchronous Receiver/Transmitter，通用异步收发传输器
 | UART_TX | 8 | 发送端口 |
 | UART_RX | 10 | 接收端口 |
 
-#### 40PIN 管脚定义
-
+### 40PIN 管脚定义
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/01_40pin_user_sample/image/40pin_user_sample/image-20241217-202319.png" alt="40PIN 管脚定义" width="100%" />
 
 ## 案例代码

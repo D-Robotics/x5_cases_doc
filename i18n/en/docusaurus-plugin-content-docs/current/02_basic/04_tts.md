@@ -1,8 +1,10 @@
 ---
+title: Text-to-Speech (TTS)
+description: Deploy a Matcha model on the RDK X5 to convert text into natural speech.
 sidebar_position: 4
 ---
 
-# 1. Text-to-Speech (TTS)
+# Text-to-Speech (TTS)
 
 TTS (Text To Speech) synthesizes natural spoken audio from text. AI algorithms simulate human pronunciation and play the content in real time. TTS is a foundation for intelligent assistants, human-machine interaction, customer service, in-vehicle systems, and robot voice interaction. It improves how devices deliver information and interact naturally.
 

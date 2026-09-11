@@ -1,8 +1,10 @@
 ---
+title: Gesture Interaction Game
+description: Build a gesture interaction game with ROS 2 and computer vision, controlling the game with hand gestures.
 sidebar_position: 1
 ---
 
-# 1. Gesture Interaction Game
+# Gesture Interaction Game
 
 Gesture interaction uses computer vision and AI to recognize hand motion, posture, and intent, then converts them into control commands a device can understand. A camera captures the gesture, and algorithms analyze and recognize it in real time for device control, command input, and state switching. Gesture interaction is an important input method for intelligent robots, human-machine collaboration, smart terminals, and virtual reality. It makes operation more convenient and more intelligent.
 

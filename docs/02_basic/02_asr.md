@@ -1,8 +1,10 @@
 ---
+title: 语音转文字（ASR）
+description: 使用 RDK X5 部署 SenseVoice 模型，将实时语音转换为文字。
 sidebar_position: 2
 ---
 
-# 1. 语音转文字（ASR）
+# 语音转文字（ASR）
 
 
 ASR（Automatic Speech Recognition，自动语音识别）即语音转文字技术，是一种将人类语音实时转换为文本的技术，是语音助手、会议纪要、智能客服和语音输入等应用的重要基础。
@@ -40,7 +42,7 @@ cmake --build build -j6
 :::tip 提示
 
 - 该功能获取麦克风输入，进行 ASR，请在安静的环境中体验，建议使用带去噪的音频设备。
-- 运行时指定音频设备请参考 [Earphone 音频口](../getting_started/earphone#查看设备) 章节，更多配置请查看案例代码的 README。
+- 运行时指定音频设备请参考 [Earphone 音频口](../01_getting_started/06_earphone.md#查看设备) 章节，更多配置请查看案例代码的 README。
 - 若 ASR 识别不到，可尝试降低 threshold 和 vad-threshold。
 
 :::

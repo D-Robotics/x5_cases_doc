@@ -1,8 +1,10 @@
 ---
+title: Chatbot
+description: Build a multimodal voice chatbot with KWS + ASR + LLM + TTS, powered by the Qwen2.5-1.5b model.
 sidebar_position: 1
 ---
 
-# 1. Chatbot
+# Chatbot
 
 
 A Large Language Model (LLM) is an AI model trained with deep learning on large-scale text. It can understand, generate, reason, and answer questions in natural language. It interprets user text or speech and produces semantically appropriate replies or actions. Through pretraining and instruction tuning, it learns language knowledge and reasoning, then uses context for dialogue, content creation, task planning, code generation, and more. LLMs are a core capability for intelligent robots, smart terminals, office assistants, and AI agents. They significantly improve natural interaction, knowledge services, and intelligent decision-making.
@@ -30,7 +32,7 @@ pip install sentencepiece pypinyin
 ### Download the LLM
 
 ```shell
-https://archive.d-robotics.cc/downloads/rdk_demo/rdk_x5_demo/qwen2.5-1.5b-instruct-q5_k_m.gguf
+wget https://archive.d-robotics.cc/downloads/rdk_demo/rdk_x5_demo/qwen2.5-1.5b-instruct-q5_k_m.gguf
 ```
 
 ### Build sherpa-onnx
@@ -92,7 +94,27 @@ colcon build --packages-select qwen_llm --cmake-args -DPLATFORM_X5=ON
 
 - This feature captures microphone input for ASR. Try it in a quiet environment. A noise-canceling audio device is recommended.
 - To specify the audio device at runtime, see [Earphone Audio Jack](../01_getting_started/06_earphone.md#check-the-device). For more configuration, see the README in the sample code.
+- English conversation is not yet supported.
 :::
+
+:::warning Paths and Devices Are Examples
+
+The workspace path, model configuration directory, model file path, and audio device name in the following commands are example values. Modify them according to your actual environment, and confirm that the corresponding files, directories, and devices exist before running the commands.
+:::
+
+#### Launch Command Parameters
+
+| Parameter or command | Purpose | What to confirm |
+| :--- | :--- | :--- |
+| `source /opt/tros/humble/setup.bash` | Loads the ROS 2 environment for RDK X5 | Whether the system environment script exists |
+| `source chat_ws/install/setup.bash` | Loads the chatbot workspace | Whether `chat_ws` is in the current directory |
+| `ros2 launch audio_io audio_io.launch.py` | Starts the audio input, speech recognition, and speech synthesis nodes | Whether the workspace is built and loaded correctly |
+| `ros2 launch qwen_llm qwen_llm.launch.py` | Starts the LLM inference node | Whether the workspace is built and loaded correctly |
+| `micphone_name` | Specifies the microphone device | Whether the device name matches the audio device in use |
+| `tts_config_path` | Specifies the TTS model configuration directory | Whether the directory exists and contains the complete model files |
+| `asr_model_path` | Specifies the ASR model file | Whether the file path and file name are correct |
+| `kws_config_path` | Specifies the KWS model configuration directory | Whether the directory exists and contains the complete model files |
+| `llm_model_path` | Specifies the LLM model file | Change to the actual path of the downloaded model file |
 
 ```shell
 # Set the TTS, ASR, and KWS model paths

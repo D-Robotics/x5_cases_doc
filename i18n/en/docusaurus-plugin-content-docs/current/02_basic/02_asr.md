@@ -1,8 +1,10 @@
 ---
+title: Speech-to-Text (ASR)
+description: Deploy a SenseVoice model on the RDK X5 to convert real-time speech to text.
 sidebar_position: 2
 ---
 
-# 1. Speech-to-Text (ASR)
+# Speech-to-Text (ASR)
 
 
 ASR (Automatic Speech Recognition) converts spoken language into text in real time. It is a foundation for voice assistants, meeting notes, intelligent customer service, and voice input.

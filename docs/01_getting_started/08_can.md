@@ -1,33 +1,30 @@
 ---
+title: CAN 接口
+description: 使用 RDK X5 的 CAN 接口控制 GM6020 电机转动。
 sidebar_position: 8
 ---
 
-# 1. CAN 接口
+# CAN 接口
 
-### 接口介绍
-
+## 接口介绍
 CAN（Controller Area Network，控制器局域网络）是一种面向实时控制的串行通信总线，通过差分信号线（CAN_H、CAN_L）实现多个设备之间的数据交换。该接口具有抗干扰能力强、通信可靠性高、支持多节点组网等特点，可在无需主机仲裁的情况下实现设备间实时通信，广泛应用于汽车电子、工业控制、机器人、智能设备及运动控制等场景。
 
-### 案例目标
-
+## 案例目标
 通过 CAN 接口控制电机转动。
 
-### 设备清单
-
+## 设备清单
 - RDK X5 开发板
 - 跳线帽
 - CAN 电机（[GM6020](https://www.robomaster.com/zh-CN/products/components/general/gm6020)）
 - 电调中心板
 - 24V 电源适配器
 
-### 硬件连接
-
-
+## 硬件连接
 <img src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/samples/x5/zh/can-hardware-connection.jpg" alt="连接示意图" width="70%" /><br/>
 
 :::info 说明
 
-两个设备之间 can 线长度超过 1 米或速率超过 125Kbps，需闭合终端电阻开关，此案例使用 GM6020 电机，速率为 1Mbps，所以使用跳线帽闭合 120 欧姆终端电阻开关。
+两个设备之间 CAN 线长度超过 1 米或速率超过 125Kbps，需闭合终端电阻开关，此案例使用 GM6020 电机，速率为 1Mbps，所以使用跳线帽闭合 120 欧姆终端电阻开关。
 - RDK X5 开发板端子接口型号：SH1.0 1X3P
 - GM6020 端子接口型号：GH1.25mm2P
 :::
