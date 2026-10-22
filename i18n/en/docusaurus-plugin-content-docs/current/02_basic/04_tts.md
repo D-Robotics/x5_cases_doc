@@ -10,7 +10,7 @@ TTS (Text To Speech) synthesizes natural spoken audio from text. AI algorithms s
 
 | Hardware | Model | Performance benchmark |
 |:---|:---|:---|
-| RDK X5<br/>USB speaker / wired headset | [Matcha](https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/matcha.html#matcha-icefall-zh-baker-chinese-1-female-speaker) | Generated text: 你好我是地瓜机器人 (2044 ms)<br/>Generation time: 780 ms (8-core CPU) |
+| RDK X5<br/>USB speaker / wired headset | [Matcha](https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/matcha.html#matcha-icefall-zh-baker-chinese-1-female-speaker) | Generated text: 你好我是地瓜机器人 ("Hello, I am D-Robotics") (2044 ms)<br/>Generation time: 780 ms (8-core CPU) |
 
 
 ## Hardware Connection
@@ -67,7 +67,7 @@ cmake --build build -j6
 :::
 
 ```shell
-# Run from the tts_demo_cpp directory
+# Run from the tts_demo_cpp directory. The model is Chinese-only, so pass Chinese text.
 ./build/tts_play --text '你好我是地瓜机器人' --device plughw:0,0
 ```
 

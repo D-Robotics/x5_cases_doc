@@ -159,11 +159,11 @@ def main():
     )
     try:
         while True:
-            # 控制
+            # Send the voltage command
             motor.send_voltage(
                 args.voltage
             )
-            #读取
+            # Read feedback
             state=motor.read_feedback()
             print(
                 state

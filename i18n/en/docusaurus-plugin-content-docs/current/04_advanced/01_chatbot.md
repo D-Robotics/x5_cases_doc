@@ -11,7 +11,7 @@ A Large Language Model (LLM) is an AI model trained with deep learning on large-
 
 | Hardware | Model | Performance benchmark |
 |:---|:---|:---|
-| RDK X5<br/>USB speaker / wired headset | LLM: [Qwen2.5-1.5b](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF)<br/>ASR: [SenseVoice](https://github.com/lovemefan/SenseVoice.cpp)<br/>KWS: [zipformer](https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-zipformer-wenetspeech-3-3m-2024-01-01-chinese)<br/>TTS: [Matcha](https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/matcha.html#matcha-icefall-zh-baker-chinese-1-female-speaker) | Qwen2.5-1.5b: Prefill 22.5 TPS/s, Gen 5.3 TPS/s (8-core CPU)<br/>ASR: RTF 0.52 (8-core CPU)<br/>KWS: RTF 0.2 (single-core CPU)<br/>TTS: "你好我是地瓜机器人" generation time: 780 ms (8-core CPU) |
+| RDK X5<br/>USB speaker / wired headset | LLM: [Qwen2.5-1.5b](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF)<br/>ASR: [SenseVoice](https://github.com/lovemefan/SenseVoice.cpp)<br/>KWS: [zipformer](https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-zipformer-wenetspeech-3-3m-2024-01-01-chinese)<br/>TTS: [Matcha](https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/matcha.html#matcha-icefall-zh-baker-chinese-1-female-speaker) | Qwen2.5-1.5b: Prefill 22.5 TPS/s, Gen 5.3 TPS/s (8-core CPU)<br/>ASR: RTF 0.52 (8-core CPU)<br/>KWS: RTF 0.2 (single-core CPU)<br/>TTS: "你好我是地瓜机器人" ("Hello, I am D-Robotics") generation time: 780 ms (8-core CPU) |
 
 
 ## Hardware Connection
