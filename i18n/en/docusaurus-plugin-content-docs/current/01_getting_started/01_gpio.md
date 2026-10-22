@@ -52,19 +52,19 @@ import time
 def signal_handler(signal, frame):
     sys.exit(0)
 
-# 此处使用 11号的 GPIO 引脚
+# Use GPIO pin 11
 input_pin = 11 
 GPIO.setwarnings(False)
 
 def main():
     prev_value = None
 
-    # 设置管脚编码模式为硬件编号 BOARD
+    # Use BOARD physical pin numbering
     GPIO.setmode(GPIO.BOARD)
-    # 设置为输入模式
+    # Set the pin as an input
     GPIO.setup(input_pin, GPIO.IN)
 
-    #等待按钮按压事件（GPIO 按钮模块在按压时会输出低电平）
+    # Wait for a button press (the GPIO button module outputs a low level when pressed)
     GPIO.wait_for_edge(input_pin, GPIO.FALLING)
     print("Starting demo now! Press CTRL+C to exit")
     GPIO.cleanup()

@@ -46,7 +46,7 @@ import signal
 import os
 import time
 
-# 导入python串口库
+# Import the Python serial library
 import serial
 import serial.tools.list_ports
 
@@ -55,10 +55,10 @@ def signal_handler(signal, frame):
 
 def serialTest():
     print("List of enabled UART:")
-    #X5使用/dev/ttyS1
+    # RDK X5 uses /dev/ttyS1
     uart_dev= "/dev/ttyS1"
 
-    baudrate = input("请输入波特率(9600,19200,38400,57600,115200,921600):")
+    baudrate = input("Enter baud rate (9600,19200,38400,57600,115200,921600):")
     try:
         ser = serial.Serial(uart_dev, int(baudrate), timeout=1) # 1s timeout
     except Exception as e:

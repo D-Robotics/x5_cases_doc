@@ -29,7 +29,7 @@ These cases deploy entry-level AI models on RDK X5, covering typical vision dete
 
 - **[Detect](./02_basic/01_detect.md)**: YOLO11m object detection (image / camera)
 - **[ASR](./02_basic/02_asr.md)**: SenseVoice speech-to-text
-- **[KWS](./02_basic/03_kws.md)**: Keyword spotting (你好地瓜)
+- **[KWS](./02_basic/03_kws.md)**: Keyword spotting (你好地瓜, "Hello Digua")
 - **[TTS](./02_basic/04_tts.md)**: Matcha text-to-speech
 
 ### Intermediate Cases
