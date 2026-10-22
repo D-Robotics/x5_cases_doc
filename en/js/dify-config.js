@@ -1,10 +1,10 @@
 window.difyChatbotConfig = {
-  token: 'rJYrxmxmjOkjEx2c', // 默认中文 Token
+  token: 'rJYrxmxmjOkjEx2c', // Default Chinese token
   baseUrl: 'https://rdk.d-robotics.cc',
   inputs: {},
   systemVariables: {},
   userVariables: {},
-  // 由 dify-config.js 在 body 就绪后动态加载 embed，需立即初始化按钮
+  // dify-config.js loads the embed after the body is ready, so the button must be initialized immediately
   dynamicScript: true,
 };
 
