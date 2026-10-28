@@ -11,7 +11,7 @@ KWS (Keyword Spotting) detects a specific wake word or keyword in real time. AI 
 
 | Hardware | Model | Performance benchmark |
 |:---|:---|:---|
-| RDK X5<br/>USB speaker / wired headset | [zipformer](https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-zipformer-wenetspeech-3-3m-2024-01-01-chinese) | Keyword: 你好地瓜 (Hello Digua)<br/>RTF (inference_time_seconds/audio_seconds): 0.2 (single-core CPU) |
+| RDK X5<br/>USB speaker / wired headset | [zipformer](https://k2-fsa.github.io/sherpa/onnx/kws/pretrained_models/index.html#sherpa-onnx-kws-zipformer-wenetspeech-3-3m-2024-01-01-chinese) | Keyword: 你好地瓜 (Hello D-Robotics)<br/>RTF (inference_time_seconds/audio_seconds): 0.2 (single-core CPU) |
 
 
 ## Hardware Connection
