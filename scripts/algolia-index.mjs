@@ -17,6 +17,10 @@ const INDEX_NAME = (process.env.ALGOLIA_INDEX_NAME || "x5_cases_doc").trim();
 const SITE_URL = normalizeSiteUrl(
   process.env.ALGOLIA_SITE_URL || "https://developer.d-robotics.cc/x5_cases_doc/",
 );
+const SITEMAP_MIRROR = normalizeSiteUrl(
+  process.env.ALGOLIA_SITEMAP_MIRROR ||
+    "https://d-robotics.github.io/x5_cases_doc/",
+);
 const RECORD_ORIGIN = (process.env.ALGOLIA_RECORD_ORIGIN || "").trim();
 const API_KEY = (process.env.ALGOLIA_ADMIN_API_KEY || "").trim();
 const DRY_RUN = process.argv.includes("--dry-run");
@@ -245,12 +249,11 @@ async function fetchText(url) {
   return { url: response.url || url, text: await response.text() };
 }
 
-async function collectPageUrls() {
+async function loadSitemapUrls(baseUrl, found) {
   const sitemapUrls = [
-    new URL("sitemap.xml", SITE_URL).href,
-    new URL("en/sitemap.xml", SITE_URL).href,
+    new URL("sitemap.xml", baseUrl).href,
+    new URL("en/sitemap.xml", baseUrl).href,
   ];
-  const found = new Set();
   for (const sitemapUrl of sitemapUrls) {
     try {
       const { text } = await fetchText(sitemapUrl);
@@ -267,8 +270,26 @@ async function collectPageUrls() {
       console.warn(`Skip sitemap ${sitemapUrl}: ${error.message}`);
     }
   }
+}
+
+async function collectPageUrls() {
+  const found = new Set();
+  await loadSitemapUrls(SITE_URL, found);
+
   if (found.size === 0) {
-    throw new Error(`No URLs found from sitemaps under ${SITE_URL}`);
+    // 生产站 nginx 未直通 .xml，sitemap.xml 恒 404。gh-pages 镜像通过
+    // "Sync gh-pages to OSS" 与线上同源，sitemap 里的 loc 已是生产域名，
+    // 因此只借它列页面，抓取仍然落在生产站上。
+    console.warn(
+      `No URLs from production sitemaps; falling back to mirror ${SITEMAP_MIRROR}`,
+    );
+    await loadSitemapUrls(SITEMAP_MIRROR, found);
+  }
+
+  if (found.size === 0) {
+    throw new Error(
+      `No URLs found from sitemaps under ${SITE_URL} or ${SITEMAP_MIRROR}`,
+    );
   }
   return [...found];
 }
