@@ -23,7 +23,9 @@ jobs:
 
       - name: Wait until published site is reachable
         run: |
-          url="https://developer.d-robotics.cc/x5_cases_doc/sitemap.xml"
+          # 探针必须是真正文页：站根只是 meta-refresh 跳转壳，而 sitemap.xml
+          # 因 nginx 未直通 .xml 恒 404，用 sitemap 当存活探针会误判站点未上线。
+          url="https://developer.d-robotics.cc/x5_cases_doc/case"
           for i in $(seq 1 12); do
             code=$(curl -sS -o /dev/null -w "%{http_code}" -L "$url" || true)
             echo "Attempt $i: $url -> $code"
@@ -32,7 +34,7 @@ jobs:
             fi
             sleep 15
           done
-          echo "Published site is not reachable. Skip until https://developer.d-robotics.cc/x5_cases_doc/ is live."
+          echo "Published site is not reachable. Skip until $url is live."
           exit 1
 
       - name: Crawl published site and update Algolia index
