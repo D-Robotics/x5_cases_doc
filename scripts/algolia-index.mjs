@@ -9,8 +9,13 @@
  *   node scripts/algolia-index.mjs --dry-run
  */
 import { createHash } from "node:crypto";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import "dotenv/config";
 import * as cheerio from "cheerio";
+import { writeEasyopsIndex } from "./easyops-index.mjs";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const APP_ID = (process.env.ALGOLIA_APP_ID || "1VU781LYTV").trim();
 const INDEX_NAME = (process.env.ALGOLIA_INDEX_NAME || "x5_cases_doc").trim();
@@ -543,6 +548,13 @@ async function main() {
   if (records.length === 0) {
     throw new Error("No DocSearch records extracted. Check SITE_URL and page meta tags.");
   }
+
+  // 一爬两出：同一批 records 既推 Algolia，也产一份 MCP 读取的本地索引。
+  // 先写文件，Algolia 上传失败时仍可人工上传索引。
+  writeEasyopsIndex(
+    records,
+    path.join(__dirname, "_algolia_tmp", "search-index.json"),
+  );
 
   if (DRY_RUN) {
     console.log("Dry run: skip Algolia upload");
